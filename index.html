@@ -22,8 +22,11 @@
 
     .wrap{ max-width:var(--max); margin:auto; padding:24px; }
     .card{
-      background:var(--card); border:1px solid var(--border);
-      border-radius:var(--rad); padding:var(--pad);
+      background:var(--card); 
+      border:1px solid var(--border);
+      border-radius:var(--rad); 
+      padding:var(--pad);
+      margin-bottom: 20px;
     }
 
     header{
@@ -44,6 +47,7 @@
     .kicker{ text-transform:uppercase; letter-spacing:.14em; color:var(--muted); font-size:.82rem }
     h1{ font-size:clamp(1.8rem,2.6vw+1rem,3rem); line-height:1.15; margin:.2em 0 .4em }
     h2{ font-size:clamp(1.2rem,1.2vw+.9rem,1.6rem); margin:.2em 0 .6em }
+    h3{ font-size:1rem; margin:.4em 0 }
     p{ margin:.5em 0 1em }
     .muted{ color:var(--muted) }
 
@@ -73,18 +77,24 @@
   </header>
 
   <main class="wrap">
-    <!-- Hero/About -->
+    <!-- Hero/About/Skills -->
     <section id="about" class="grid cols-2">
-      <div class="card">
+      <!-- Full-width hero card -->
+      <div class="card" style="grid-column: 1 / -1;">
         <div class="kicker">Software Engineer</div>
         <h1>Hi, I’m Dylan.</h1>
-        <p class="muted">I like taking ideas to production: clean APIs, resilient infra, and friendly UIs.</p>
+        <p class="muted">
+          I’m passionate about shaping ideas into working products, 
+          from clean APIs and dependable infrastructure to interfaces people enjoy using.
+        </p>
         <div class="btnrow">
           <a class="btn secondary" href="https://github.com/DylanMatthewHall" target="_blank" rel="noopener">GitHub</a>
           <a class="btn secondary" href="resources/DylanHallResume.pdf" target="_blank" rel="noopener">Resume</a>
           <a class="btn secondary" href="www.linkedin.com/in/dylanmh" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
+
+      <!-- About Me card -->
       <div class="card">
         <h2>About Me</h2>
         <p>
@@ -94,19 +104,57 @@
         </p>
         <p>
           Since graduating, I’ve been shipping personal projects (including this site) and focusing on 
-          full-stack development with Java, Spring, and AWS.
+          full-stack development with Java, Spring, Angular, and AWS.
         </p>
       </div>
+
+      <!-- Skills card -->
+      <div class="card">
+        <h2>Skills</h2>
+        <div class="grid cols-2">
+          <div>
+            <h3>Languages</h3>
+            <ul>
+              <li>Java (Spring Boot)</li>
+              <li>Python</li>
+              <li>C++</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Software Tools</h3>
+            <ul>
+              <li>AWS (EC2, S3, VPC)</li>
+              <li>Angular</li>
+              <li>Git & GitHub</li>
+              <li>Docker & Kubernetes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
-    <!-- What I am Working On -->
-    <div class="card">
-      <h2>What I am Working On</h2>
-      <ul>
-        <li>Building a Recipe CRUD web app using Java Spring Boot and AWS hosting.</li>
-        <li>Learning containerization with Docker and Kubernetes through small projects.</li>
-        <li>Improving my front-end design skills with HTML, CSS, and JavaScript projects.</li>
-      </ul>
-    </div>
+
+    <!-- Work & Reading side by side -->
+    <section class="grid cols-2">
+      <div class="card">
+        <h2>What I am Working On</h2>
+        <ul>
+          <li>Building backend applications with Spring Boot</li>
+          <li>Exploring cloud architecture and deployment with AWS and Google Cloud</li>
+          <li>Advancing frontend skills through projects with Angular</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>What I am Reading</h2>
+        <ul>
+          <li><em>Spring In Action</em> - Craig Walls</li>
+          <li><em>Clean Code</em> - Robert C. Martin</li>
+          <li><em>Cracking the Coding Interview</em> - Gayle Laakmann McDowell</li>
+        </ul>
+      </div>
+    </section>
+
     <!-- Contact -->
     <section id="contact" class="card">
       <h2>Contact</h2>
